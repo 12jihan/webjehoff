@@ -6,18 +6,19 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 
+const export_import = [
+  NavbarComponent,
+  HeaderComponent,
+  FooterComponent
+];
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule
   ],
-  declarations: [
-    NavbarComponent,
-    HeaderComponent,
-    FooterComponent
-  ],
-  exports: [NavbarComponent],
+  declarations: [...export_import],
+  exports: [...export_import],
   providers: []
 })
 export class CoreModule { }
