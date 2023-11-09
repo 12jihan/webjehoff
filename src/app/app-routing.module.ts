@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: 'home',
     pathMatch: 'full',
-    loadChildren: () => import('./feature/feature/feature.module').then(m => m.FeatureModule)
+    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
   }
 ];
 
