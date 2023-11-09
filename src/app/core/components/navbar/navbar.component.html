@@ -1,6 +1,6 @@
 <div class="navbar-container">
     <div *ngFor="let link of navLinks; index as i;" class="navbar-button-container">
-        <a class="navbar-button" (click)="test()">
+        <a [routerLink]="['/' + link]" class="navbar-button">
             {{ link.toUpperCase() }}
         </a>
     </div>
