@@ -1,0 +1,16 @@
+.banner-container {
+    width: 100%;
+    height: 325px;
+
+    .banner-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+
+        .banner-left-btn, .banner-right-btn {
+            height: 100%;
+            width: 50px;
+        }
+    }
+}

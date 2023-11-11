@@ -10,18 +10,13 @@ const routes: Routes = [
   {
     path: 'home',
     pathMatch: 'full',
-    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
+    loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'about',
     pathMatch: 'full',
-    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
-  },
-  {
-    path: 'home',
-    pathMatch: 'full',
-    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule)
-  },
+    loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule)
+  }
 ];
 
 @NgModule({
