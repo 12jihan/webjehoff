@@ -1,6 +1,43 @@
 .banner-container {
     width: 100%;
     height: 325px;
+    position: relative;
+
+    .content-wrapper, .nav-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-wrapper {
+        z-index: 1;
+    }
+
+    .nav-wrapper {
+        z-index: 10;
+    }
+
+    .banner-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: #111;
+        overflow: hidden;
+
+        p {
+            font-size: 45px;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
 
     .banner-nav {
         display: flex;
@@ -11,6 +48,10 @@
         .banner-left-btn, .banner-right-btn {
             height: 100%;
             width: 50px;
+            border: none;
+            background-color: #33333330;
+            color: white;
+            cursor: pointer;
         }
     }
 }
