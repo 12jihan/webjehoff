@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GithubService } from './services/github-service/github.service';
 
 
 const export_import = [
@@ -17,6 +18,6 @@ const export_import = [
   ],
   declarations: [...export_import],
   exports: [...export_import],
-  providers: []
+  providers: [GithubService]
 })
 export class CoreModule { }

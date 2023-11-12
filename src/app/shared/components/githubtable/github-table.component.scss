@@ -1,0 +1,15 @@
+.table-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
+    .table-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        p {
+            font-size: 25px;
+        }
+    }
+}

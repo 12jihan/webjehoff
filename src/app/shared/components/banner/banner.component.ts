@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as particleJS from 'particles.js';
 
 
 @Component({
