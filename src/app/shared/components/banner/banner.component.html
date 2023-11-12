@@ -1,14 +1,15 @@
 <div class="banner-container">
     <div class="content-wrapper">
         <div class="banner-content-container">
-            <div class="banner-content" [style.background-image]="'url(' + img_url + ')'">
+            <div class="banner-content">
+                <img src="/assets/nameLogoLight.png">
             </div>
-            <div class="banner-text">
+            <div *ngIf="false" class="banner-text">
                 <p>Jareem E. Hoff</p>
             </div>
         </div>
     </div>
-    <div class="nav-wrapper">
+    <div *ngIf="false" class="nav-wrapper">
         <div class="banner-nav">
             <button class="banner-left-btn"><</button>
             <button class="banner-right-btn">></button>
