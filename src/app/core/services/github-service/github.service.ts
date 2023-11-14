@@ -9,8 +9,14 @@ export class GithubService {
 
   constructor(private _http: HttpClient) { }
 
+  // Create the request that I'm looking to make:
+  /**
+   * @params None Whats so ever ;)
+   * @return GitHubRepo[]
+   */
   getRepos() {
-    let repoList: {}[] = [];
+    // Defining the type of array that I want to make:
+    let repoList: GithubRepo[] = [];
 
     this._http.get<GithubRepo[]>('https://api.github.com/users/12jihan/repos').subscribe((repos: any) => {
       // Taking exactly what I need from this:
