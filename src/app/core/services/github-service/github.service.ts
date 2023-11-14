@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { GithubRepo } from '../../models/GithubServiceModel';
 
 @Injectable({
   providedIn: 'root'
@@ -10,29 +11,11 @@ export class GithubService {
 
   getRepos() {
     let repoList: {}[] = [];
-    // const random = {
-    //   repo_id: number,
-    //   repo_owner: string,
-    //   repo_name: string,
-    //   repo_main_language: string | null,
-    //   repo_languages: string | null,
-    //   repo_size: number,
-    //   repo_desc: string,
-    //   repo_ssh: string,
-    //   repo_stars: number, 
-    //   repo_watchers: number,
-    //   repo_forks: string,
-    //   repo_owner_id: number,
-    //   repo_creation_date: Date,
-    //   repo_update_date: Date,
-    //   link_to_profile: string,
-    //   link_to_repo: string 
-    // };
 
-    this._http.get('https://api.github.com/users/12jihan/repos').subscribe((repos: any) => {
-      // Taking exactly what I need from this.
+    this._http.get<GithubRepo[]>('https://api.github.com/users/12jihan/repos').subscribe((repos: any) => {
+      // Taking exactly what I need from this:
       repos.forEach((repo: any) => {
-        const repo_obj: {} = {
+        const repo_obj: GithubRepo = {
           repo_id: repo.id,
           repo_owner: repo.owner.login,
           repo_name: repo.name,
@@ -52,7 +35,8 @@ export class GithubService {
         };
         repoList.push(repo_obj)
       });
-      console.log("Repo List: \n", repoList);
+
+      // Return the modified list of repos:
       return repoList;
     });
   }
