@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GithubService } from 'src/app/core/services/github-service/github.service';
 
 @Component({
   selector: 'jeh-github-table',
   templateUrl: './github-table.component.html',
   styleUrls: ['./github-table.component.scss']
 })
-export class GithubTableComponent {
+export class GithubTableComponent implements OnInit {
 
   tableHeaders: string[] = ['Name', 'Area', 'Something', 'Else'];
   tableContent: { name: string, area: string, something: Number, else: Date }[] = [
@@ -29,8 +30,12 @@ export class GithubTableComponent {
     },
   ]
 
-  constructor() {
+  constructor(private _gh: GithubService) {
 
+  }
+
+  ngOnInit(): void {
+    this._gh.getRepos();
   }
 
 }

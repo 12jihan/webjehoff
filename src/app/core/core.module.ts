@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GithubService } from './services/github-service/github.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const export_import = [
@@ -14,7 +15,8 @@ const export_import = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   declarations: [...export_import],
   exports: [...export_import],
