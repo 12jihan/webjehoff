@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubRepo } from 'src/app/core/models/GithubServiceModel';
 import { GithubService } from 'src/app/core/services/github-service/github.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { GithubService } from 'src/app/core/services/github-service/github.servi
 export class GithubTableComponent implements OnInit {
 
   tableHeaders: string[] = [];
-  repoContent: any[] = [];
+  repoContent: GithubRepo[] = [];
 
   constructor(private _gh: GithubService) {
   }

@@ -15,10 +15,9 @@ export class GithubService {
    * @return GitHubRepo[]
    */
   getRepos() {
-    // Defining the type of array that I want to make:
-    let repoList: GithubRepo[] = [];
-    
-    this._http.get<GithubRepo[]>('https://api.github.com/users/12jihan/repos').subscribe((repos: any[]) => {
+    let repoList: GithubRepo[] = []; 
+    this._http.get<GithubRepo[]>('https://api.github.com/users/12jihan/repos')
+    .subscribe((repos: any[]) => {
       let info: GithubRepo;
       repos.forEach((repo) => {
         info = {
@@ -42,7 +41,6 @@ export class GithubService {
         repoList.push(info);
       });
     });
-
     return repoList;
   }
 }

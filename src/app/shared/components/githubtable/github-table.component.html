@@ -1,13 +1,11 @@
 <div class="table-container">
-    <table *ngIf="repoContent" class="github-table">
-        <tr>
-            <th *ngFor="let header of tableHeaders">{{ header }}</th>
-        </tr>
-        <tr class="table-row" *ngFor="let repo of repoContent">
-            <!-- <td>{{repo.repo_id}}</td> -->
-            <!-- <td>{{thing.area}}</td>
-            <td>{{thing.something}}</td>
-            <td>{{thing.else}}</td> -->
-        </tr>
-    </table>
+    <div class="github-table-header">
+        <p *ngFor="let header of tableHeaders" class="github-header">
+            {{ header }}
+        </p>
+    </div>
+
+    <div class="github-table-content">
+
+    </div>
 </div>
