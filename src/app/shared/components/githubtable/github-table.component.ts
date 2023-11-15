@@ -8,17 +8,13 @@ import { GithubService } from 'src/app/core/services/github-service/github.servi
 })
 export class GithubTableComponent implements OnInit {
 
-  tableHeaders: string[] = ['Name', 'Area', 'Something', 'Else'];
-  repoContent: any = [];
+  tableHeaders: string[] = [];
+  repoContent: any[] = [];
 
   constructor(private _gh: GithubService) {
-
   }
 
   ngOnInit(): void {
-    // this.repoContent = this._gh.getRepos().then(repos => {
-    //   this.repoContent = repos;
-    // });
   }
 
 }
