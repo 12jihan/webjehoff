@@ -15,6 +15,6 @@ export class GithubTableComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.repoContent = this._gh.getRepos();
   }
-
 }
