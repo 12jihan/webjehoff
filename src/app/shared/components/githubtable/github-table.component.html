@@ -1,7 +1,7 @@
 <div *ngIf="repoContent" class="component-container">
     <div class="table-container">
         <div class="github-table-header">
-            <p *ngFor="let header of tableHeaders" class="github-header">
+            <p *ngFor="let header of tableHeaders" class="github-header; let i of index;">
                 {{ header }}
             </p>
         </div>
