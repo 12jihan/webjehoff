@@ -25,14 +25,19 @@
             width: 250px;
         }
 
+        .header-0, .header-1 {
+            width: 100px;
+        }
+
     }
     // span them in columns instead of rows??
     .github-table-content {
         display: flex;
         flex-direction: column;
-        height: 500px;
+        height: 200px;
         overflow-y: scroll;
         background-color: #222;
+        border-radius: 5px;
 
         .content-container {
             display: flex;
@@ -44,6 +49,10 @@
                 width: 250px;
                 text-wrap: nowrap;
                 overflow: hidden;
+            }
+
+            .cell-0, .cell-1 {
+                width: 100px;
             }
         }
     }

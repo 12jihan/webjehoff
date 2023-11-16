@@ -1,15 +1,20 @@
 <div *ngIf="repoContent" class="component-container">
     <div class="table-container">
         <div class="github-table-header">
-            <p *ngFor="let header of tableHeaders" class="github-header; let i of index;">
-                {{ header }}
+            <p [class]="'header-' + i" *ngFor="let header of tableHeaders; index as i;" class="github-header">
+                {{ header}}
             </p>
         </div>
 
         <div class="github-table-content">
-            <div class="content-container" *ngFor="let repo of repoContent">
+            <div class="content-container" *ngFor="let repo of repoContent; index as i;">
                 <p class="cell-0">{{ repo.repo_name }}</p>
-                <p class="cell-1">{{ repo.repo_desc ? repo.repo_desc : "none"}}</p>
+                <p class="cell-1">{{ repo.repo_languages ? repo.repo_languages : "none"}}</p>
+                <p class="cell-2">{{ repo.repo_desc ? repo.repo_desc : "none"}}</p>
+
+                <div class="github-link">
+                    <a routerLink="/home"></a>
+                </div>
             </div>
         </div>
     </div>
