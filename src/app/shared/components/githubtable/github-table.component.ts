@@ -9,7 +9,7 @@ import { GithubService } from 'src/app/core/services/github-service/github.servi
 })
 export class GithubTableComponent implements OnInit {
 
-  tableHeaders: string[] = [];
+  tableHeaders: string[] = ['name','description'];
   repoContent: GithubRepo[] = [];
 
   constructor(private _gh: GithubService) {

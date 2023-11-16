@@ -1,11 +1,32 @@
-<div class="table-container">
-    <div class="github-table-header">
-        <p *ngFor="let header of tableHeaders" class="github-header">
-            {{ header }}
-        </p>
+<div *ngIf="repoContent" class="component-container">
+    <div class="table-container">
+        <div class="github-table-header">
+            <p *ngFor="let header of tableHeaders" class="github-header">
+                {{ header }}
+            </p>
+        </div>
+
+        <div class="github-table-content">
+            <div class="content-container" *ngFor="let repo of repoContent">
+                <p class="cell-0">{{ repo.repo_name }}</p>
+                <p class="cell-1">{{ repo.repo_desc ? repo.repo_desc : "none"}}</p>
+            </div>
+        </div>
     </div>
 
-    <div class="github-table-content">
-
-    </div>
+    <!-- <table>
+        <tr>
+            <th>hey</th>
+            <th>hey</th>
+            <th>hey</th>
+        </tr>
+        <tbody class="table-body">
+            <tr *ngFor="let repo of repoContent" class="rowtest">
+                <td>{{ repo.repo_name }}</td>
+                <td>{{ repo.repo_languages ? repo.repo_languages : "(none)" }}</td>
+                <td>{{ repo.repo_desc ? repo.repo_desc : "(none)"}}</td>
+                <td>{{ repo.repo_size}}</td>
+            </tr>
+        </tbody>
+    </table> -->
 </div>
