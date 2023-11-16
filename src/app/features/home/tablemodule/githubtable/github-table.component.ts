@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GithubRepo } from 'src/app/core/models/GithubServiceModel';
 import { GithubService } from 'src/app/core/services/github-service/github.service';
 
@@ -12,10 +13,11 @@ export class GithubTableComponent implements OnInit {
   tableHeaders: string[] = ['Name', 'Language', 'Description'];
   repoContent: GithubRepo[] = [];
 
-  constructor(private _gh: GithubService) {
+  constructor(private _gh: GithubService, private _router: Router) {
   }
 
   ngOnInit(): void {
     this.repoContent = this._gh.getRepos();
+    // this._router.navigate(['']);
   }
 }

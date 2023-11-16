@@ -6,7 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  }
+  },
+  {
+    path: '',
+    loadChildren: () => import('./tablemodule/tablemodule.module').then(m => m.TablemoduleModule),
+    outlet: 'github-table'
+  },
 ];
 
 @NgModule({
