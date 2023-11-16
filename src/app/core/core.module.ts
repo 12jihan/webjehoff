@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GithubService } from './services/github-service/github.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TablemoduleModule } from './tablemodule/tablemodule.module';
 
 
 const export_import = [
@@ -16,7 +17,8 @@ const export_import = [
   imports: [
     CommonModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    TablemoduleModule
   ],
   declarations: [...export_import],
   exports: [...export_import],
