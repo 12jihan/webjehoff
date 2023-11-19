@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-deploy": "ng build && aws s3 cp ./out s3://www.jehoff.com --profile admin --recursive",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

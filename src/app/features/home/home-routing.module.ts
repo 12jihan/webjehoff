@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { GithubTableComponent } from './tablemodule/githubtable/github-table.component';
+import { TablemoduleModule } from './tablemodule/tablemodule.module';
 
 const routes: Routes = [
   {
@@ -9,12 +10,11 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: '123',
-        component: GithubTableComponent,
-        // loadChildren: () => import('./tablemodule/tablemodule.module').then(m => m.TablemoduleModule),
-      },
+        path: '',
+        loadChildren: () => import('./tablemodule/tablemodule.module').then((mod) => mod.TablemoduleModule)
+      }
     ]
-  },
+  }, 
 ];
 
 @NgModule({
