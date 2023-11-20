@@ -1,0 +1,17 @@
+<div *ngIf="repo_data" class="details-container">
+    <button (click)="this.navBack()"><fa-icon [icon]="faChevronLeft"></fa-icon></button>
+    <p>{{ repo_data.repo_id }}</p>
+    <p>{{ repo_data.repo_main_language }}</p>
+    <p>{{ repo_data.repo_name }}</p>
+    <p>{{ repo_data.repo_owner }}</p>
+    <p>{{ repo_data.repo_desc }}</p>
+    <p>{{ repo_data.repo_size }}</p>
+    <p>{{ repo_data.repo_ssh }}</p>
+    <p>{{ repo_data.repo_stars }}</p>
+    <p>{{ repo_data.repo_forks }}</p>
+    <p>{{ repo_data.link_to_profile }}</p>
+    <p>{{ repo_data.link_to_repo }}</p>
+    <p>{{ repo_data.repo_watchers }}</p>
+    <p>{{ repo_data.repo_update_date }}</p>
+    <p>{{ repo_data.repo_creation_date }}</p>
+</div>

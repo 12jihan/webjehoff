@@ -1,0 +1,11 @@
+<div class="content-container" *ngFor="let repo of repoContent; index as i;">
+    <div class="content-info">
+        <p class="cell-0">{{ repo.repo_name }}</p>
+        <p class="cell-1">{{ repo.repo_languages ? repo.repo_languages : "none"}}</p>
+        <p class="cell-2">{{ repo.repo_desc ? repo.repo_desc : "none"}}</p>
+    </div>
+
+    <div class="content-actions">
+        <button (click)="this.repoDetails(repo)"><fa-icon [icon]="faChevronRight"></fa-icon></button>
+    </div>
+</div>

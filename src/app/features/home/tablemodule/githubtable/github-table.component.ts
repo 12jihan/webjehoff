@@ -22,4 +22,6 @@ export class GithubTableComponent implements OnInit {
     this.repoContent = this._gh.getRepos();
     // this._router.navigate(['']); 
   }
+
+  
 }

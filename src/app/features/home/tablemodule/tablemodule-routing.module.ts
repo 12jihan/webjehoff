@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GithubTableComponent } from './githubtable/github-table.component';
+import { MainpageComponent } from './githubtable/mainpage/mainpage.component';
+import { DetailspageComponent } from './githubtable/detailspage/detailspage.component';
 
 const routes: Routes = [
   { 
@@ -8,7 +10,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: GithubTableComponent
+        component: MainpageComponent
+      },
+      {
+        path: 'home/:repo_id',
+        component: DetailspageComponent
       },
 
     ],
