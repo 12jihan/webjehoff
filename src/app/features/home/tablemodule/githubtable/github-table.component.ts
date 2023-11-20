@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { GithubRepo } from 'src/app/core/models/GithubServiceModel';
 import { GithubService } from 'src/app/core/services/github-service/github.service';
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'jeh-github-table',
@@ -12,6 +13,7 @@ export class GithubTableComponent implements OnInit {
 
   tableHeaders: string[] = ['Name', 'Language', 'Description'];
   repoContent: GithubRepo[] = [];
+  faChevronRight = faChevronCircleRight;
 
   constructor(private _gh: GithubService, private _router: Router) {
   }

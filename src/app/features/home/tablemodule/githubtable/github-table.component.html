@@ -8,12 +8,20 @@
 
         <div class="github-table-content">
             <div class="content-container" *ngFor="let repo of repoContent; index as i;">
-                <p class="cell-0">{{ repo.repo_name }}</p>
-                <p class="cell-1">{{ repo.repo_languages ? repo.repo_languages : "none"}}</p>
-                <p class="cell-2">{{ repo.repo_desc ? repo.repo_desc : "none"}}</p>
+                <div class="content-info">
+                    <p class="cell-0">{{ repo.repo_name }}</p>
+                    <p class="cell-1">{{ repo.repo_languages ? repo.repo_languages : "none"}}</p>
+                    <p class="cell-2">{{ repo.repo_desc ? repo.repo_desc : "none"}}</p>
+                </div>
 
-                <div class="github-link">
-                    <a routerLink="/home"></a>
+                <div class="content-actions">
+                    <!-- <a>
+                        <fa-icon class="icon" [icon]="faChevronRight"></fa-icon>
+                    </a>
+
+                    <a>
+                        <fa-icon class="icon" [icon]="faChevronRight"></fa-icon>
+                    </a> -->
                 </div>
             </div>
         </div>
