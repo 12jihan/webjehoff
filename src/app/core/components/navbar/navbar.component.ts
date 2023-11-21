@@ -9,8 +9,8 @@ export class NavbarComponent {
 
   navLinks: string[] = [
     'home',
-    // 'about',
-    // 'contact',
+    'about',
+    'contact',
     // 'projects',
     // 'resume'
   ]
