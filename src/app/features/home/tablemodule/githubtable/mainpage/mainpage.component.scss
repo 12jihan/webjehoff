@@ -1,0 +1,74 @@
+.table-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+
+    .table-header {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        left: 0;
+        top: 0;
+        padding: 15px 15px;
+        background-color: #333;
+
+        p {
+            font-size: 18px;
+        }
+
+        .header-0,
+        .header-1 {
+            width: 125px;
+        }
+    }
+
+    .content-wrapper {
+        overflow-y: scroll;
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 15px;
+            height: 50px;
+
+            .content-info {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                p {
+                    overflow: hidden;
+                }
+
+                .cell-0,
+                .cell-1 {
+                    width: 125px;
+                }
+
+                .cell-2 {
+                    width: 350px;
+                    overflow: hidden;
+                    // text-wrap: nowrap;
+                }
+            }
+
+            .content-actions {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                fa-icon {
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    .content-wrapper :hover {
+        background-color: #999;
+    }
+
+}

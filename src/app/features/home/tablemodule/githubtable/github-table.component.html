@@ -1,13 +1,3 @@
-<div *ngIf="repoContent" class="component-container">
-    <div class="table-container">
-        <div class="github-table-header">
-            <p [class]="'header-' + i" *ngFor="let header of tableHeaders; index as i;" class="github-header">
-                {{ header}}
-            </p>
-        </div>
-
-        <div class="github-table-content">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
+<div class="github-table-content">
+    <router-outlet></router-outlet>
 </div>

@@ -1,17 +1,56 @@
 <div *ngIf="repo_data" class="details-container">
-    <button (click)="this.navBack()"><fa-icon [icon]="faChevronLeft"></fa-icon></button>
-    <p>{{ repo_data.repo_id }}</p>
-    <p>{{ repo_data.repo_main_language }}</p>
-    <p>{{ repo_data.repo_name }}</p>
+    <div class="details-header">
+        <div (click)="this.navBack()">
+            <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </div>
+        <div class="header-actions">
+            <p><a [href]="repo_data.link_to_repo" target="_blank">{{ repo_data.repo_name }}</a> by <a href="https://www.github.com/12jihan/" target="_blank">{{ repo_data.repo_owner }}</a></p>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="content-stats">
+            <div class="stat-item">
+                <p><fa-icon [icon]="faStar"></fa-icon> Starred</p>
+                <p>{{ repo_data.repo_stars }}</p>
+            </div>
+            <div class="stat-item">
+                <p><fa-icon [icon]="faCodeFork"></fa-icon> Forked</p>
+                <p>{{ repo_data.repo_forks }}</p>
+            </div>
+            <div class="stat-item">
+                <p><fa-icon [icon]="faCode"></fa-icon> Language Used</p>
+                <p>{{ repo_data.repo_main_language }}</p>
+            </div>
+            <div class="stat-item">
+                <p><fa-icon [icon]="faScaleUnbalanced"></fa-icon> Repo Size</p>
+                <p>{{ math.floor(repo_data.repo_size / 1000) }}mb</p>
+            </div>
+        </div>
+
+        <div class="content-desc">
+            <p>Repository Description</p>
+            <p>{{ repo_data.repo_desc }}</p>
+        </div>
+
+        <div class="content-etc">
+            <div class="etc-item">
+                <p>Creation Date</p>
+                <p>{{ repo_data.repo_creation_date | date:"mm/dd/yyyy" }}</p>
+            </div>
+
+            <div class="etc-item">
+                <p>Last Updated</p>
+                <p>{{ repo_data.repo_update_date | date:"mm/dd/yyyy"}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <p>{{ repo_data.repo_id }}</p>
     <p>{{ repo_data.repo_owner }}</p>
     <p>{{ repo_data.repo_desc }}</p>
-    <p>{{ repo_data.repo_size }}</p>
     <p>{{ repo_data.repo_ssh }}</p>
-    <p>{{ repo_data.repo_stars }}</p>
-    <p>{{ repo_data.repo_forks }}</p>
     <p>{{ repo_data.link_to_profile }}</p>
     <p>{{ repo_data.link_to_repo }}</p>
-    <p>{{ repo_data.repo_watchers }}</p>
-    <p>{{ repo_data.repo_update_date }}</p>
-    <p>{{ repo_data.repo_creation_date }}</p>
+    <p>{{ repo_data.repo_watchers }}</p> -->
 </div>

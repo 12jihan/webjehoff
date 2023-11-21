@@ -1,5 +1,5 @@
 .section-container {
-    padding: 75px 75px 0px 75px;
+    padding: 50px 275px;
     background-color: #222;
     color: #d5d5d5;
 
@@ -31,6 +31,10 @@
     }
 }
 
-// .section-skills {
-
-// }
+.github-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+}
