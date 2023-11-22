@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injector } from '@angular/core';
 import { Router } from '@angular/router';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
@@ -11,12 +11,13 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 export class HomeComponent {
   faEnvelope = faEnvelope;
 
-  constructor(private _router: Router) {
+  constructor(public _router: Router, private _injector: Injector) {
 
   }
 
   navigate() {
-    console.log("asdasd: ",   )
-    this._router.navigateByUrl("/contact");
+    const _otherRouter: Router = this._injector.get(Router);
+    _otherRouter.navigate(["/contact"]);
+    
   };
 }

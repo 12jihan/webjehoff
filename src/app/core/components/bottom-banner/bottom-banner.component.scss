@@ -1,0 +1,18 @@
+.bottom-banner-container {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 175px;
+    a {
+        color: white;
+        font-size: 40px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #333;
+
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'jeh-button',
@@ -8,7 +8,9 @@ import { Component, Input } from '@angular/core';
 
 export class ButtonComponent {
   @Input() btnText: string = '';
-  @Input() execute: () => void = () => {};
+  @Output("execute") execute: EventEmitter<any> = new EventEmitter();
 
-
+  onClick() {
+    this.execute.emit();
+  }
 }

@@ -11,7 +11,6 @@ import { ContactComponent } from './features/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
   ],
   imports: [
     BrowserModule,

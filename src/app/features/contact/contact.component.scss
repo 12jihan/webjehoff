@@ -1,0 +1,44 @@
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // width: 700px;
+    margin-top: 50px;
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        border: 1px solid #999;
+        border-radius: 8px;
+        padding: 25px;
+
+        label {
+            color: white;
+        }
+
+        input {
+            min-width: 300px;
+            max-width: 300px;
+            font-size: 18px;
+            padding: 5px;
+            height: 20px;
+            border-radius: 8px;
+            
+        }
+        
+        textarea {
+            font-size: 18px;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin-top: 25px;
+        }
+    }
+}
