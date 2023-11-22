@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ButtonComponent {
-  @Input() text = 'Contact Me';
+  @Input() btnText: string = '';
+  @Input() execute: () => void = () => {};
 
 
 }

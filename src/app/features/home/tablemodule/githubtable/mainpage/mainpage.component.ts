@@ -22,8 +22,6 @@ export class MainpageComponent implements OnInit {
   }
 
   repoDetails(repo: GithubRepo) {
-    console.log('repo: ', repo);
-    console.log('activated route: ', this._ar);
     this._router.navigate(['home/', repo.repo_id], { state: repo });
   }
 

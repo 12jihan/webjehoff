@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
@@ -9,4 +10,13 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 export class HomeComponent {
   faEnvelope = faEnvelope;
+
+  constructor(private _router: Router) {
+
+  }
+
+  navigate() {
+    console.log("asdasd: ",   )
+    this._router.navigateByUrl("/contact");
+  };
 }
