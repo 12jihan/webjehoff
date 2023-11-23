@@ -21,7 +21,7 @@ const routes: Routes = [
   {
     path: 'blog',
     pathMatch: 'full',
-    loadChildren: () => import('./features/blog/blog.module').then(m => m.BlogModule)
+    loadComponent: () => import('./features/blogging/blogging.component').then(c => c.BloggingComponent)
   },
   {
     path: 'contact',

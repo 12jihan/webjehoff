@@ -7,10 +7,11 @@ import { GithubService } from './services/github-service/github.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BottomBannerComponent } from './components/bottom-banner/bottom-banner.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BloggingService } from './services/blogging-service/blogging.service';
 ;
 
 
-const export_import = [
+const export_declarations = [
   NavbarComponent,
   FooterComponent,
   BottomBannerComponent
@@ -23,8 +24,8 @@ const export_import = [
     HttpClientModule,
     FontAwesomeModule
   ],
-  declarations: [...export_import],
-  exports: [...export_import],
-  providers: [GithubService]
+  declarations: [...export_declarations],
+  exports: [...export_declarations],
+  providers: [GithubService, BloggingService]
 })
 export class CoreModule { }
