@@ -16,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule
   ],
   exports: [
-    GithubTableComponent
+    GithubTableComponent,
+    DetailspageComponent
   ]
 })
 export class TablemoduleModule { }
