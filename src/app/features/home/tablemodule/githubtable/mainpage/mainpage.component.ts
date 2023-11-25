@@ -22,7 +22,7 @@ export class MainpageComponent implements OnInit {
   }
 
   repoDetails(repo: GithubRepo) {
-    this._router.navigate(['home/', repo.repo_id], { state: repo });
+    this._router.navigate(['home', repo.repo_id], { state: repo });
   }
 
 }
