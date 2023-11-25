@@ -1,4 +1,4 @@
-<section class="container">
+<section class="blog-page-info">
     <h1 class="title">
         Jareem's Blog
     </h1>
@@ -11,13 +11,20 @@
         Also, a bit of a cheeky way to show off my skills.
     </p>
 
-    <div *ngFor="let post of mockBlogPreview; index as i;" [class]="'blog-card-' + i + ' blog-card'">
+    <!-- <ng-template [ngIf]="showBlogs"> -->
+        
+    <!-- </ng-template> -->
+</section>
+
+<section class="blog-preview">
+    <div *ngFor="let post of blogPreview; index as i;" [class]="'blog-card-' + i + ' blog-card'">
         <div class="blog-preview-card">
             <div class="card-header">
                 <div class="header-image">
                     <fa-icon [icon]="faGlobe"></fa-icon>
                 </div>
                 <div class="header-title">
+                    {{ post.title }}
                 </div>
             </div>
 

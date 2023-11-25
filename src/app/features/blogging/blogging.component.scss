@@ -1,4 +1,4 @@
-.container {
+.blog-page-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +17,21 @@
         margin-bottom: 50px;
     }
 
+
+}
+
+.blog-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .blog-card {
         width: 700px;
         border: 1px solid #999;
         border-radius: 8px;
         padding: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
 
         .card-header {
             display: flex;
@@ -88,5 +97,4 @@
             }
         }
     }
-
 }

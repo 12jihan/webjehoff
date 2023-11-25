@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BloggingService } from 'src/app/core/services/blogging-service/blogging.service';
 import { BlogPreviewModel } from 'src/app/core/models/BlogPreviewModel';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { faShare, faHeart, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faShare, faHeart, faGlobe, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
@@ -17,11 +17,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class BloggingComponent implements OnInit {
 
-  faShare = faShare;
-  faHeart = faHeart;
-  faGlobe = faGlobe;
+  faShare: IconDefinition = faShare;
+  faHeart: IconDefinition = faHeart;
+  faGlobe: IconDefinition = faGlobe;  
+  showBlogs: boolean = true;
 
-  mockBlogPreview: BlogPreviewModel[] = [
+  blogPreview: BlogPreviewModel[] = [
     {
       title: "###This is a stitch This is a stitch This is a",
       body: `
